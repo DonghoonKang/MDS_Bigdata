@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+    <country lastupdated="2019-04-08 14:27:57.261088" name="Singapore">
+        <rank>5</rank>
+        <year>2011</year>
+        <gdppc>59900</gdppc>
+        <neighbor direction="N" name="Malaysia" /> Second Country
+    </country>
+    <country lastupdated="2019-04-08 14:27:57.261088" name="Panama">
+        <rank>69</rank>
+        <year>2011</year>
+        <gdppc>13600</gdppc>
+        <neighbor direction="W" name="Costa Rica" />
+        <neighbor direction="E" name="Colombia" /> Third Country
+    </country>
+</data>
