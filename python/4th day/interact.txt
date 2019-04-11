@@ -1,0 +1,20 @@
+from collections import OrderedDict
+from IPython.display import (display,clear_output,YouTubeVideo)
+from ipywidgets import Dropdown
+# We create a DropdownWidget, with a dictionary containing the keys (video name) and #the values (Youtube identifier) of every menu item.
+dw = Dropdown(options=OrderedDict([('SciPy 2016', 'Ejh0ftSjk6g'),
+('PyCon 2016', 'YgtL4S7Hrwo'),
+('PyData 2016', 's4ChP7tc3tA')]))
+# We create a callback function that displays the requested Youtube video.
+def on_value_change(name, val):
+    clear_output()
+    display(YouTubeVideo(val))
+# Every time the user selects an item, the
+# function `on_value_change` is called, and the
+# `val` argument contains the value of the selected
+# item.
+dw.on_trait_change(on_value_change, 'value')
+# We choose a default value.
+dw.value = dw.options['SciPy 2016']
+# Finally, we display the widget.
+display(dw)
